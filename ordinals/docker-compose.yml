@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      KEEP: true
+      KEEP: "true"
 
   ord:
     image: bentatum/ord:dev
