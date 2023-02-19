@@ -8,3 +8,7 @@ services:
   ord:
     image: bentatum/ord:dev
     restart: on-failure
+    volumes:
+      - ${APP_BITCOIN_DATA_DIR}:/root/.bitcoin:ro
+    # environment:
+      # - BTCRPCURL: "http://$APP_BITCOIN_NODE_IP:$APP_BITCOIN_RPC_PORT"
