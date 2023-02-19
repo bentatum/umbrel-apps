@@ -9,6 +9,9 @@ services:
     image: bentatum/ord:dev
     restart: on-failure
     ports:
-      - "3005:3005"
+      - "${APP_BITCOIN_RPC_PORT}:${APP_BITCOIN_RPC_PORT}"
     volumes:
       - ${APP_BITCOIN_DATA_DIR}:/root/.bitcoin:ro
+    environment:
+      - APP_BITCOIN_NODE_IP=${APP_BITCOIN_NODE_IP}
+      - APP_BITCOIN_RPC_PORT=${APP_BITCOIN_RPC_PORT}
