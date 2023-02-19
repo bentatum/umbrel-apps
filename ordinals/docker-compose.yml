@@ -13,4 +13,4 @@ services:
     volumes:
       - ${APP_BITCOIN_DATA_DIR}:/root/.bitcoin:ro
     environment:
-      - RPC_URL: ${APP_BITCOIN_NODE_IP}:${APP_BITCOIN_RPC_PORT}
+      RPC_URL: ${APP_BITCOIN_NODE_IP}:${APP_BITCOIN_RPC_PORT}
