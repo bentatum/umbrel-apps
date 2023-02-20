@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: ordinals_web_1
-      APP_PORT: 6942
+      APP_PORT: 3000
 
   ord:
     image: bentatum/ord:dev
