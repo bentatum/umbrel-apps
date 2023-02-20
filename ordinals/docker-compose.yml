@@ -21,3 +21,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/var/lib/ord
       - ${APP_BITCOIN_DATA_DIR}:/root/.bitcoin:ro
+    environment:
+      - RPC_URL=${APP_BITCOIN_NODE_IP}
+      - CHAIN=${APP_BITCOIN_NETWORK}
+
