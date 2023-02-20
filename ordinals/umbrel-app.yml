@@ -3,7 +3,7 @@ id: ordinals
 category: Explorers
 name: Ordinals
 version: "0.1.0"
-tagline: rare and exotic sats
+tagline: explore inscriptions
 # description: >-
 #   BTC RPC Explorer is a full-featured, self-hosted explorer for the
 #   Bitcoin blockchain. With this explorer, you can explore not just the
@@ -19,7 +19,7 @@ tagline: rare and exotic sats
 
 #   This version also includes lots of minor styling improvements, better
 #   error handling, and several bugfixes.
-developer: Dan Janosik
+developer: Ben Tatum
 # website: https://explorer.btc21.org
 dependencies:
   - bitcoin
