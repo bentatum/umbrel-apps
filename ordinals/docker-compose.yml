@@ -9,18 +9,18 @@ services:
 
   ord:
     image: bentatum/ord:dev
-    command: "--rpc-url ${APP_BITCOIN_NODE_IP} --index-sats --chain ${APP_BITCOIN_NETWORK} index"
+    command: "--data-dir /data --bitcoin-data-dir /bitcoin --rpc-url ${APP_BITCOIN_NODE_IP} --index-sats --chain ${APP_BITCOIN_NETWORK} index"
     volumes:
-      - ${APP_DATA_DIR}/data:/var/lib/ord
-      - ${APP_BITCOIN_DATA_DIR}:/root/.bitcoin:ro
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_BITCOIN_DATA_DIR}:/bitcoin:ro
 
   api:
     image: bentatum/ord-api:dev
     ports:
       - "3000:3000"
     volumes:
-      - ${APP_DATA_DIR}/data:/var/lib/ord
-      - ${APP_BITCOIN_DATA_DIR}:/root/.bitcoin:ro
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_BITCOIN_DATA_DIR}:/bitcoin:ro
     environment:
       - RPC_URL=${APP_BITCOIN_NODE_IP}
       - CHAIN=${APP_BITCOIN_NETWORK}
