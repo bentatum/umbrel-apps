@@ -3,10 +3,11 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: ordinals_web_1
+      APP_HOST: ordinals_api_1
       APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
 
-  ord:
+  api:
     image: bentatum/ord:dev
     ports:
       - "3000:3000"
